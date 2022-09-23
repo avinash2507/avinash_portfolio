@@ -1,0 +1,88 @@
+.mask {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.into-img {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+.mask::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.8;
+}
+.main-image {
+  height: 100%;
+  width: 100%;
+}
+.main-image .content {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  color: white;
+}
+.content p {
+  font-size: 1.2rem;
+}
+.cover {
+  font-size: 1.2rem;
+}
+
+.content h1 {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif, sans-serif;
+  font-size: 2.5rem;
+  text-shadow:3px 4px 4px rgba(65, 68, 214, 0.8) ;
+}
+.Download {
+  position: relative;
+  top: 5px;
+  left: 10px;
+  cursor: pointer;
+}
+.btn-position{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 640px) {
+  .main-image .content h1 {
+    font-size: 1.5rem;
+  }
+  .main-image .content p {
+    font-size: 1.4rem;
+  }
+  .content h1 {
+    font-size: 1.2rem;
+  }
+  /* .btn-light {
+    position: relative;
+    margin: 20px 10px;
+    top: 50px;
+  } */
+  @media (min-width:640px) and (max-width: 1140px) {
+    .btn-light {
+      position: relative;
+      top: 45px;
+      left: 2px;
+    }
+    .content h1 {
+      font-family: "Open Sans", "Helvetica Neue", sans-serif, sans-serif;
+      font-size:1rem;
+      margin: 2px;
+      padding: 2px 1px;
+      text-shadow:3px 4px 4px rgba(65, 68, 214, 0.8) ;
+    }
+  }
+}
